@@ -1,0 +1,14 @@
+c:\GitHub\BaseConverter\BaseConverter\bin\Debug\net8.0\BaseConverter.exe
+c:\GitHub\BaseConverter\BaseConverter\bin\Debug\net8.0\BaseConverter.deps.json
+c:\GitHub\BaseConverter\BaseConverter\bin\Debug\net8.0\BaseConverter.runtimeconfig.json
+c:\GitHub\BaseConverter\BaseConverter\bin\Debug\net8.0\BaseConverter.dll
+c:\GitHub\BaseConverter\BaseConverter\bin\Debug\net8.0\BaseConverter.pdb
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.AssemblyInfoInputs.cache
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.AssemblyInfo.cs
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.csproj.CoreCompileInputs.cache
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.dll
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\refint\BaseConverter.dll
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.pdb
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.genruntimeconfig.cache
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\ref\BaseConverter.dll
