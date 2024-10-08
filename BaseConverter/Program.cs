@@ -54,11 +54,11 @@ public class BaseInt{
         if (b == 1 || b == 0){
             // Convert normally
             int v = value / a;
-            o = ""+BaseDigit(value - (v*a));
+            o = ""+ToBaseDigit(value - (v*a));
             while (v > 0) {
                 int pv = v;
                 v = v / a;
-                o = BaseDigit(pv - (v*a)) + o;
+                o = ToBaseDigit(pv - (v*a)) + o;
             }
         } else {
             // Fractional bases
@@ -66,20 +66,20 @@ public class BaseInt{
             if (b < a) {
                 // Calulate normally
                 int v = value / a * b;
-                o = ""+BaseDigit(value - (v*a/b));
+                o = ""+ToBaseDigit(value - (v*a/b));
                 while (v > 0) {
                     int pv = v;
                     v = v / a * b;
-                    o = BaseDigit(pv - (v*a/b)) + o;
+                    o = ToBaseDigit(pv - (v*a/b)) + o;
                 }
             } else {
                 // Calulate normally but a and b swaped
                 int v = value / b * a;
-                o = ""+BaseDigit(value - (v*b/a));
+                o = ""+ToBaseDigit(value - (v*b/a));
                 while (v > 0) {
                     int pv = v;
                     v = v / b * a;
-                    o = BaseDigit(pv - (v*b/a)) + o;
+                    o = ToBaseDigit(pv - (v*b/a)) + o;
                 }
                 // Flip decimal
                 string ro = o[o.Length - 1] + ".";
@@ -92,11 +92,19 @@ public class BaseInt{
         Console.WriteLine($"{value} in base {((b != 1) ? $"{a}/{b}" : $"{a}")} is equal to {o}");
     }
 
-    public char BaseDigit(int digit) {
-        if (digit < 10) {
-            return (char)(48 + digit);
+    // For converting numbers with a base greater than 10, example 0xa in 16 == 10 in 10
+    public char ToBaseDigit(int digit) {
+        if (digit < 10) { 
+            return (char)(48 + digit); // 0-9
         }
-        return (char)(97 + (digit-10));
+        return (char)(97 + (digit-10)); // n>10
+    }
+
+    public int FromBaseDigit(char c) {
+        if ((int)c < 60) {
+            return (int)c - 48; // 0-9
+        }
+        return (int)c - 97; // n>10
     }
 }
 
