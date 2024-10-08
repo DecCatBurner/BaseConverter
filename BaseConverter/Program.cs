@@ -54,11 +54,11 @@ public class BaseInt{
         if (b == 1 || b == 0){
             // Convert normally
             int v = value / a;
-            o = ""+(value - (v*a));
+            o = ""+BaseDigit(value - (v*a));
             while (v > 0) {
                 int pv = v;
                 v = v / a;
-                o = (pv - (v*a)) + o;
+                o = BaseDigit(pv - (v*a)) + o;
             }
         } else {
             // Fractional bases
@@ -66,20 +66,20 @@ public class BaseInt{
             if (b < a) {
                 // Calulate normally
                 int v = value / a * b;
-                o = ""+(value - (v*a/b));
+                o = ""+BaseDigit(value - (v*a/b));
                 while (v > 0) {
                     int pv = v;
                     v = v / a * b;
-                    o = (pv - (v*a/b)) + o;
+                    o = BaseDigit(pv - (v*a/b)) + o;
                 }
             } else {
                 // Calulate normally but a and b swaped
                 int v = value / b * a;
-                o = ""+(value - (v*b/a));
+                o = ""+BaseDigit(value - (v*b/a));
                 while (v > 0) {
                     int pv = v;
                     v = v / b * a;
-                    o = (pv - (v*b/a)) + o;
+                    o = BaseDigit(pv - (v*b/a)) + o;
                 }
                 // Flip decimal
                 string ro = o[o.Length - 1] + ".";
@@ -89,7 +89,14 @@ public class BaseInt{
                 o = ro;
             }
         }
-        Console.WriteLine($"{value} in base {a}/{b} is equal to {o}");
+        Console.WriteLine($"{value} in base {((b != 1) ? $"{a}/{b}" : $"{a}")} is equal to {o}");
+    }
+
+    public char BaseDigit(int digit) {
+        if (digit < 10) {
+            return (char)(48 + digit);
+        }
+        return (char)(97 + (digit-10));
     }
 }
 

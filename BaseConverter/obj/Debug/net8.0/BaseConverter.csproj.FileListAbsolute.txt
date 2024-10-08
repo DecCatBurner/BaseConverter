@@ -12,3 +12,4 @@ c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\refint\BaseConverter.dll
 c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.pdb
 c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.genruntimeconfig.cache
 c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\ref\BaseConverter.dll
+c:\GitHub\BaseConverter\BaseConverter\obj\Debug\net8.0\BaseConverter.sourcelink.json
